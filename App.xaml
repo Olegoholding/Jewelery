@@ -1,0 +1,37 @@
+﻿<Application x:Class="Jewelery.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Jewelery"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="Accent" Color="#f6ca62"/>
+        <SolidColorBrush x:Key="DarkTheme" Color="#242a38"/>
+        <SolidColorBrush x:Key="LightTheme" Color="#9CACCC"/>
+        <SolidColorBrush x:Key="Current" Color="#242a38"/>
+        <SolidColorBrush x:Key="Button" Color="#4e596f"/>
+        <SolidColorBrush x:Key="MouseEnter" Color="#6F6B4E"/>
+
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{StaticResource Button}" CornerRadius="0">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource MouseEnter}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource MouseEnter}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
