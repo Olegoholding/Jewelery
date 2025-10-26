@@ -17,10 +17,8 @@
 
         <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Width="895">
 
-            <Button Width="500" Height="200" Margin="15,15,0,15" Click="Button_Click">
+            <Button Width="500" Tag="Комитеты" Uid="Фамилия" Height="200" Margin="15,15,0,15" Click="Button_Click">
                 <Grid>
-                    <TextBlock Text="КОММИТЕТЫ" Foreground="{StaticResource Accent}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="48" TextWrapping="Wrap" Margin="30,0,0,0"/>
-
                     <Viewbox Stretch="Uniform" HorizontalAlignment="Right">
                         <Grid Width="27" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Path StrokeThickness="2" Fill="{DynamicResource Accent}" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="27" Width="27" Canvas.Left="14.282" Canvas.Top="2.473" Margin="11,0,0,0">
@@ -30,11 +28,12 @@
                             </Path>
                         </Grid>
                     </Viewbox>
+                    <TextBlock Text="КОММИТЕТЫ" Foreground="{StaticResource Accent}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="48" TextWrapping="Wrap" Margin="30,0,0,0"/>
                 </Grid>
             </Button>
 
 
-            <Button Width="350" ClipToBounds="True" Height="200" Margin="15,15,15,15" Click="Button_Click">
+            <Button Width="350" ClipToBounds="True" Tag="НазванияИзделий" Uid="Материал" Height="200" Margin="15,15,15,15" Click="Button_Click">
                 <Grid>
                     <Viewbox Stretch="Uniform" HorizontalAlignment="Right">
                         <Grid Width="27" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -50,10 +49,8 @@
             </Button>
 
 
-            <Button Width="350" Height="200" ClipToBounds="True" Margin="15,0,15,15" Click="Button_Click">
+            <Button Width="350" Height="200" Tag="Журнал" Uid="Изделие" ClipToBounds="True" Margin="15,0,15,15" Click="Button_Click">
                 <Grid>
-                    <TextBlock Text="ЖУРНАЛ" Foreground="{StaticResource Accent}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="48" TextWrapping="Wrap" Margin="30,0,0,0"/>
-
                     <Viewbox Stretch="Uniform" HorizontalAlignment="Right">
                         <Canvas Width="27" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Path StrokeThickness="2" Fill="{DynamicResource Accent}" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="27" Canvas.Left="15.983" Canvas.Top="4.1" RenderTransformOrigin="0.5,0.5">
@@ -71,13 +68,12 @@
                             </Path>
                         </Canvas>
                     </Viewbox>
+                    <TextBlock Text="ЖУРНАЛ" Foreground="{StaticResource Accent}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="48" TextWrapping="Wrap" Margin="30,0,0,0"/>
                 </Grid>
             </Button>
 
-            <Button ClipToBounds="True" Width="500" Height="200" Margin="0,0,15,15" Click="Button_Click">
+            <Button Tag="ЖурналСдачи" Uid="Номер" ClipToBounds="True" Width="500" Height="200" Margin="0,0,15,15" Click="Button_Click">
                 <Grid>
-                    <TextBlock Text="ЖУРНАЛ СДАЧИ ИЗДЕЛИЙ" TextAlignment="Right" Foreground="{StaticResource Accent}" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="48" TextWrapping="Wrap" Margin="0,0,30,0"/>
-
                     <Viewbox Stretch="Uniform" HorizontalAlignment="Left">
                         <Canvas Width="27" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Path StrokeThickness="2" Fill="{DynamicResource Accent}" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="27" Width="27" Canvas.Left="-14.017" Canvas.Top="4.1" RenderTransformOrigin="0.5,0.5">
@@ -95,6 +91,7 @@
                             </Path>
                         </Canvas>
                     </Viewbox>
+                    <TextBlock Text="ЖУРНАЛ СДАЧИ ИЗДЕЛИЙ" TextAlignment="Right" Foreground="{StaticResource Accent}" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="48" TextWrapping="Wrap" Margin="0,0,30,0"/>
                 </Grid>
             </Button>
         </WrapPanel>
@@ -105,5 +102,6 @@
         </ComboBox>
 
         <Frame x:Name="Frame" Grid.RowSpan="2" NavigationUIVisibility="Hidden"/>
+        <Label Content="Label" Name="TimeBox"  HorizontalAlignment="Left" Margin="801,73,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
