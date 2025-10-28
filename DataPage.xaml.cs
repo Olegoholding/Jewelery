@@ -17,7 +17,7 @@ namespace Jewelery
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
         readonly string connStr = "Server = 95.183.12.18; Port = 3306; Database = yuvelirka; user = oleg";
-        public DataPage(string tag, string uid, string command)
+        public DataPage(string name, string tag, string uid, string command)
         {
             InitializeComponent();
             
@@ -26,6 +26,7 @@ namespace Jewelery
             Command = command;
 
             SrcBox.Text = $"Поиск по {Uid}";
+            DirName.Text = name;
             DataGrid.ItemsSource = LoadData(command).DefaultView;
         }
 
